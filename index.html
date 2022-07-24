@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB1-Welcome</title>
+    <meta charset="utf-8">
+    <style>
+      body{
+        margin: 0;
+        }
+
+      a{    /*여기서 a는 이 웹페이지에 있는 모든 a태그를 선택한다라는 점에서 선택자(selector)라고 불림*/
+        color:black; /*좌 속성(property) 우 속성의값(value)*/
+        text-decoration: none;
+        /*선택자가 지정한 태그들에 대해서 어떤 효과를 줄것인가를 선언(declaration)*/
+      }
+      /*#active{
+        color:red;
+      }
+      /*
+      .saw{ /*그냥 saw만 작성하게되면 이 웹페이지의 모든 saw라는 이름의 태그를 선택하는 선택자임, 우리가 원하는건 class 값이 saw인 태그
+        color: gray;
+      }*/
+
+      h1{
+        font-size: 45px; /*px 픽셀로 컴퓨터가 사용하는 단위*/
+        text-align: center; /*align은 정렬이라는 뜻*/
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+      }
+      ol{ /*ol 태그도 화면 전체를 쓰는 블록태그임 때문에 width로 넓이 지정*/
+        border-right: 1px solid gray;
+        width: 100px;
+        margin:0;
+        padding: 20px;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol{
+        padding-left: 32px;
+      }
+      #grid #article{
+        padding-left: 25px;
+      }
+      @media(max-width:800px){ /*screem width<800*/
+        #grid{
+          display: block;
+        }
+        ol{
+          border-right: none;
+        }
+        h1{
+          border-bottom: none;
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">Javascript</a></li>
+      </ol>
+      <div id="article">
+        <h2>WEB</h2>
+        <p>
+          The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+        </p>
+    </div>
+  </div>
+</body>
+</html>
